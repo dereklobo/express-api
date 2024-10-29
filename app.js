@@ -9,6 +9,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var greetRouter = require('./routes/greet');
 var nasaApiRouter = require('./routes/nasaApi');
+var openAIRouter = require('./routes/openAI');
 
 const port = process.env.PORT;
 
@@ -29,6 +30,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/greet', greetRouter);
 app.use('/nasa', nasaApiRouter);
+app.use('/openai', openAIRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
